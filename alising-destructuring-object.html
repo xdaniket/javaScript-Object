@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  //
+
+  //*** Allising is used to change the key name if we have same key in different object.
+
+  //** Allising is used when we take same key in different object so that tym we have to use
+  //** Allising method to change the key name of last one object..
+
+  const obj = {
+    name: "Aniket",
+    city: "Sehore",
+    age: 22,
+  };
+
+  const obj2 = {
+    name: "Aniket",
+    city: "Bhopal",
+  };
+
+  const { name, city, age } = obj;
+  const { name: fname, city: Ucity } = obj2; // Allising is used here. Modify the key name.
+
+  console.log("obj1 :", { name, city, age });
+  console.log("obj2 :", { fname, Ucity });
+
+  //** pinCode key is not in obj so print the "Not Avaliable"
+
+  const { name: fnames, city: Ucitys, pinCode = "NA" } = obj2; // Allising is used here. Modify the key name.
+  console.log("obj2 :", { fnames, Ucitys, pinCode });
+
+  console.log({ name, city, age, fname, Ucity, pinCode: "Not Avaliable" });
+
+  //**  Nested Objects  ___________________________.
+
+  const profile1 = {
+    fName: "Annu",
+    lName: "Thakur",
+    favMen: {
+      cricket: "Virat-Kohli",
+      actor: "Ram-Charan",
+    },
+  };
+
+  const profile2 = {
+    fName: "Annu-Thakur",
+    favMen: {
+      cricket: "MS Dhoni",
+      actor: "Yash KGF",
+    },
+  };
+
+  //** Destructuring and Allising in Nested Object.
+
+  const {
+    fName,
+    lName,
+    favMen: { cricket, actor },
+  } = profile1;
+
+  console.log("Profile1 :", { fname, lName, cricket, actor });
+
+  const {
+    fName: frstName,
+    favMen: { cricket: cricketerName, actor: actorName }, // Allising is used here to change the key name.
+  } = profile2;
+
+  console.log("Profile2 :", { frstName, cricketerName, actorName });
+
+  //
+</script>

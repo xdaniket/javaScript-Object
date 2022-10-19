@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //      If we want to check the given object is empty or not. So
+  // Frst :
+  //     we will have to apply this property = Object.keys(obj) = to get all the keys of object.
+  //     Bcoz it give us all the keys of given object in array.so now we have length property.
+  //     apllying this condition = (objKeys.length == 0) = we can check object is empty or not.
+
+  const obj = {
+    name: "Aniket",
+    age: 22,
+    city: "Sehore",
+  };
+
+  const objKeys = Object.keys(obj);
+  console.log("keys of obj :", objKeys);
+
+  if (objKeys.length == 0) {
+    console.log("Object is Empty.");
+  } else {
+    console.log("Object is not Empty."); //  Return this.
+  }
+
+  //
+
+  const obj2 = {};
+
+  const objKeys2 = Object.keys(obj2);
+  console.log("keys of obj :", objKeys2);
+
+  if (objKeys2.length == 0) {
+    console.log("Object is Empty."); //  Return this.
+  } else {
+    console.log("Object is not Empty.");
+  }
+
+  // Checking for Array is Empty or not.
+
+  const arr = [1, 2, 3, 4];
+  if (arr.length == 0) {
+    console.log("Array is Empty.");
+  } else {
+    console.log("Array is not Empty.");
+  }
+</script>

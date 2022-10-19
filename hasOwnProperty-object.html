@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // hasOwnProperty  :
+  //                  Is simply used to check a given key is present in object or not.
+  //                  Always return a boolean value.
+
+  // Note            :
+  //                  There are many ways to check a key is present or not in object.
+
+  //  1.    obj.hasOwnProperty("name")  //  True;  False;
+  //  2.    console.log("ages" in obj);//   False; True;
+
+  // const obj = {
+  //   name: "Aniket",
+  //   age: 22,
+  //   city: "Sehore",
+  // };
+
+  // console.log(obj.hasOwnProperty("name")); //     1st Method.
+
+  // console.log("ages" in obj); //                  2nd Method.
+
+  // const hasKey1 = obj.hasOwnProperty("name"); //  with variable.
+  // console.log(hasKey1);
+
+  // const hasKey2 = "ages" in obj; //               with variable.
+  // console.log(hasKey2);
+
+  // console.log(Reflect.has(obj, "name1")); //      inbuilt Method.
+
+  // console.log(Object.hasOwn(obj, "age")); //      inbuilt Method.
+
+  // console.log(Object.keys(obj).some((keyCheck) => keyCheck === "name"));
+</script>

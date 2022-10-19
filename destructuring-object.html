@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //
+
+  // Destructuring Object help us to write minimum line of code.
+  // Like: when we want to know the key ki value so all tym we write. (object name . key name)
+  // But after Destructuring Object(we convert key in variable) we can easily get the key value.
+
+  //
+
+  const obj = {
+    fname: "Aniket",
+    lname: "Thakur",
+    city: "Sehore MP",
+    age: 22,
+  };
+
+  const message =
+    "My Name is Aniket Thakur & I am from Sehore MP. & I'm 22 years old now.";
+  console.log("message :", message);
+
+  // Print this message with Template Literal .
+
+  const myMessage = `My Name is ${obj.fname}-${obj.lname} & I am from ${obj.city}. & I'm ${obj.age} years old now. `;
+  console.log("myMessage :", myMessage);
+
+  // Print this message with Destructuring Object.
+
+  const { fname, lname, city, age } = obj;
+
+  const newMessage = `My Name is ${fname}-${lname} & I am from ${city}. & I'm ${age} years old now. `;
+  console.log("newMessage :", newMessage);
+
+  //
+
+  const obj2 = {
+    uName: "Aniket",
+    uAge: "Sehore",
+  };
+  const { uName, uAge } = obj2;
+  // console.log(uName, uAge); // Aniket , Sehore
+  console.log({ uName, uAge }); //  {uName: 'Aniket', uAge: 'Sehore'}
+</script>

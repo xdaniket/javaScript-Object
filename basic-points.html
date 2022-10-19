@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  // NOTE :Jb hm ek object ko dusre object m assign krte h phr jb dusre m change krte h to is trh
+  // loop chalakr hm use bcha skte h phr jo hm dusre m change krenege to bo phle m chnge ni hoga.
+
+  const obj1 = {
+    name: "Aniket",
+  };
+  console.log(obj1);
+  const obj2 = {};
+  for (let keys in obj1) {
+    obj2[keys] = obj1[keys];
+  }
+  obj2.name = "Annu";
+  console.log(obj2);
+  console.log(obj1);
+
+  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  // NOTE : Do object, kbhi bhi equal ni hote bhli key value same ho, ya n ho dono he (false) ayyega.
+  //        q ki non primitive datatype refrence pr work krta h same array k sath bhi hoga.
+  //        hr bar refrence bdlta jayega.
+
+  //     const obj1 = {
+  //       name: "Aniket",
+  //     };
+  //     const obj2 = {
+  //       name: "Aniket",
+  //     };
+  //     console.log(obj1 == obj2);           //   False
+
+  //   {name:"Aniket"} == {name:"Aniket"}    //    False
+
+  //   {} == {}                             //     False
+
+  // Array m bhi same yahi hoga :    []===[]  //  False   &&  ["Annu"]===["Annu"] // False
+
+  // NOTE: prmitive datatype m true dedega q ki bo value pr work krte h.
+  //       or  hm usme value change ni kr skte yadi hm ek ko dusre m dale or phr dure m change kre
+  //       to phle m change ni hoga.
+
+  "annu" === "annu"; //  True
+
+  let a = "annu";
+  let b = a;
+  b = "kaallu";
+  console.log(a); //   annu
+  console.log(b); //   kallu
+
+  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+</script>

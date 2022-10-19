@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //
+
+  // Object.assign({}, obj); ..... is used to quickly copy the whole object on another
+  //                               new object....
+
+  const obj = {
+    fname: "Aniket",
+    lname: "Thakur",
+    city: "Sehore MP",
+    age: 22,
+    favMan: {
+      cricket: "MS Dhoni",
+      actor: "Yash",
+    },
+  };
+  const newObj = Object.assign({}, obj);
+  delete newObj.city;
+  delete newObj.favMan.actor;
+
+  console.log("newObj :", newObj);
+  console.log("obj :", obj);
+</script>

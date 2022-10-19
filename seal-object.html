@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //  Seal :
+  //       After applying the Seal property we can Seal our object.
+  //       And after that we can change(modify) only the existing key.
+  //       And after that we can't do change anything in object.Like add,delete..
+
+  //  Object.seal(obj);     It is used to Seal the object.
+  //  Object.isSealed(obj); It is used to check an object is Seal or not.
+
+  const obj = {
+    name: "Aniket",
+    age: 22,
+  };
+  Object.seal(obj); //    Seal the object.
+  console.log("isSeal :", Object.isSealed(obj)); // True; (Checking for our object is seal or not.)
+
+  obj.name = "Annu"; //           After Seal we can only modify the key,
+  obj.age = 21; //                After Seal we can only modify the key,
+
+  obj.city = "Sehore"; //         After Seal we can't add new (key = property)
+  delete obj.name; //             After Seal can't delete key nd value .
+
+  const addCity = "city"; //         Can't add.
+  obj[addCity] = "Bhopal";
+
+  obj["phoneNo"] = "9165928808"; //  Can't add.
+
+  obj[2] = "Makan no"; //            Can't add.
+
+  console.log("obj :", obj);
+</script>

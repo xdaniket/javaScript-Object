@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const obj = {
+    name: "Aniket",
+    city: "Sehore",
+    age: 22,
+  };
+
+  // Before..
+  const states = obj.state || "NA";
+  console.log(states);
+
+  // After..
+  const { name = "NA", city, age, state = "NA" } = obj; // If key is exit so print that value, nd if it's not so print a message.
+  console.log({ name, city, age, state });
+</script>

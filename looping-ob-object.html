@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const profile = {
+    fname: "Aniket",
+    lname: "Thakur",
+    age: 22,
+    city: "Sehore",
+  };
+
+  console.log("Profile :", profile);
+
+  // // In loop on Object . it is uesd only on object.to get the key.
+
+  for (const keys in profile) {
+    console.log(keys);
+    console.log(profile[keys]);
+    console.log(keys, profile[keys]);
+  }
+
+  //
+
+  //   Normal loop on Array.
+
+  const arr1 = [1, 2, 3, 4, 14, 5, 15, 16, 6, 7, 8, 88, 18];
+  for (var i = 0; i < arr1.length; i++) {
+    console.log(arr1[i]);
+  }
+
+  // //
+
+  //  Of loop on Array.of is used only on Array, to get value
+
+  const arr = [1, 2, 3, 4, 14, 5, 15, 16, 6, 7, 8, 88, 18];
+  for (const values of arr) {
+    //      in better result.
+    console.log(values);
+    // console.log(arr[values]);
+    // console.log(values, arr[values]);
+  }
+
+  // For Each Loop is used on Array to ittrate a value.
+
+  const arr4 = [1, 2, 3, 6];
+  arr4.forEach((index, value) => {
+    console.log(index, value); //         Get both index nd value.
+  });
+
+  const arr3 = [1, 2, 3, 6];
+  arr3.forEach((i) => {
+    console.log("For-Each-Loop :", i);
+  });
+</script>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const movie = { name: "ABCD", rating: "5", a: 1, b: 2, c: 2 };
+  const {
+    name: movieName,
+    rating: movieRating,
+    country = "NA",
+    ...result
+  } = movie;
+  console.log("@AT :", movieName, movieRating, country, result);
+</script>
+
+<script>
+  //
+
+  // Rest Operator :
+  //                The javaScript Rest operator are the coolection of remaining element.
+  //                And it is always written in the last position, at tym of destructuring of object.
+
+  const profile = {
+    fname: "Aniket",
+    lname: "Thakur",
+    age: 22,
+    city: "Sehore",
+  };
+
+  //** I want new obj same but Expect the (city) key nd (age) key.
+
+  const { city, age, ...bachaHua } = profile;
+  console.log("bachaHua :", bachaHua); //        New;
+  console.log("Profile :", profile); //          Old;
+
+  // Nested Object ..
+
+  const profile2 = {
+    fname: "Aniket",
+    lname: "Thakur",
+    profileAge: 22,
+    newCity: "Sehore",
+    favMen: {
+      menCricket: "MS-dhoni",
+      menActor: "Yash",
+    },
+  };
+
+  //**  Except the (newCity) key nd (profileAge) key nd (menActor) key.
+
+  const { newCity, profileAge, menActor, ...bachaHua2 } = profile2;
+
+  console.log("bachaHua 2 :", bachaHua2);
+  console.log("profile 2 :", profile2);
+
+  //  Spread Operator :
+  //                  The javaScript spread operator allow us to quickly copy all or part of an
+  //                  existing object or array into another object or array.
+
+  const oldObj = {
+    fname: "Aniket",
+    lname: "Thakur",
+    age: 22,
+    city: "Sehore",
+  };
+
+  //** I want new obj same but Expect the (city) key nd (age) key.
+
+  const newObj = { ...oldObj };
+  delete newObj.city;
+  delete newObj.age;
+
+  console.log("newObj :", newObj);
+  console.log("oldObj :", oldObj);
+
+  // Nested Object ..
+
+  const oldObj2 = {
+    fname: "Aniket",
+    lname: "Thakur",
+    age: 22,
+    city: "Sehore",
+    favMen: {
+      cricket: "MS-dhoni",
+      actor: "Yash",
+    },
+  };
+
+  //**  Except the (city) key nd (age) key nd (cricket) key.
+
+  const newObj2 = { ...oldObj2 };
+  delete newObj2.city;
+  delete newObj2.age;
+  delete newObj2.favMen.cricket;
+
+  console.log("newObj2 :", newObj2);
+  console.log("oldObj2 :", oldObj2);
+
+  //
+
+  //** I want new obj same but Expect the (city) key .
+
+  const oldObj3 = {
+    fname: "Aniket",
+    lname: "Thakur",
+    age: 22,
+    city: "Sehore",
+  };
+
+  // **  By using a loop
+
+  let copy = {};
+  for (let key in oldObj3) {
+    if (key !== "city") {
+      copy[key] = oldObj3[key];
+    }
+  }
+  console.log("copy :", copy);
+  console.log("oldObj3 :", oldObj3);
+
+  // Nested Object...
+
+  const oldObj4 = {
+    fname: "Aniket",
+    lname: "Thakur",
+    age: 22,
+    city: "Sehore",
+    favMen: {
+      cricket: "MS-dhoni",
+      actor: "Yash",
+    },
+  };
+
+  //**  Except the (city) key nd (age) key nd (cricket) key.
+
+  let copy2 = {};
+  for (let keys in oldObj4) {
+    if (keys !== "city" && keys !== "age" && keys !== "cricket") {
+      copy2[keys] = oldObj4[keys];
+    }
+  }
+
+  console.log("copy2 :", copy2);
+  console.log("oldObj4 :", oldObj4);
+</script>

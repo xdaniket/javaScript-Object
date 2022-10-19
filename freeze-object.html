@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //  Freeze : To make certain fields read only,  nd it always return a boolean value.
+  //           After applying the Freeze property we can Freeze our object.
+  //           And after that we can't do change anything in object.Like modify,add,delete..
+
+  //  Object.freeze(obj);   It is used to Freeze the object.
+  //  Object.isFrozen(obj); It is used to check an object is Freeze or not.
+
+  const obj = {
+    name: "Aniket",
+    age: 22,
+  };
+
+  Object.freeze(obj); //     Freeze the object.
+  console.log("isFrozen :", Object.isFrozen(obj)); // True; (Checking for our object is freeze or not.)
+
+  obj.name = "Annu"; //      After freeze can't modify,
+  obj.city = "Sehore"; //    After freeze can't add new (key = property)
+  delete obj.name; //        After Freeze can't delete key nd value .
+
+  const addCity = "city"; //         Can't add.
+  obj[addCity] = "Bhopal";
+
+  obj["phoneNo"] = "9165928808"; //  Can't add.
+
+  obj[2] = "Makan no"; //            Can't add.
+  console.log("obj :", obj);
+</script>
